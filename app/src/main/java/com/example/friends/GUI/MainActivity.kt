@@ -39,12 +39,14 @@ class MainActivity : ListActivity() {
         // position is in the list!
         // first get the name of the person clicked
         val name = Friends().getAll()[position].name
-        // and a greeting
+
+
         Toast.makeText(
             this,
             "Hi $name! Have you done your homework?",
             Toast.LENGTH_LONG
         ).show()
+
     }
 
 }

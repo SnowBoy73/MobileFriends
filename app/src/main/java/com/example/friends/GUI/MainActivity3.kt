@@ -2,6 +2,7 @@ package com.example.friends.GUI
 
 import android.app.ListActivity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,11 +26,26 @@ class MainActivity3 : ListActivity() {
         // first get the name of the person clicked
         val name = Friends().getAll()[position].name
         // and a greeting
-        Toast.makeText(
-                this,
-                "Hi $name! Have you done your homework?",
-                Toast.LENGTH_LONG
-        ).show()
+
+        // NEW
+        val selectedFriend = Friends().getAll()[position]
+
+
+        // change view
+
+        //btnStartAnotherActivity.setOnClickListener {
+            val intent = Intent(this, DetailsActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+
+        /*
+              Toast.makeText(
+                  this,
+                  "Hi $name! Have you done your homework?",
+                  Toast.LENGTH_LONG
+              ).show()
+              */
+
     }
 
     internal class FriendAdapter( context: Context,
