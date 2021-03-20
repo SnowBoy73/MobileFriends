@@ -14,10 +14,10 @@ import com.example.friends.Model.Friends
 import com.example.friends.R
 
 
-class MainActivity3 : ListActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        listAdapter = FriendAdapter(this, Friends().getAll())
+    class MainActivity3 : ListActivity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            listAdapter = FriendAdapter(this, Friends().getAll())
     }
 
     override fun onListItemClick(parent: ListView?,
